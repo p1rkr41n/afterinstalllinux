@@ -1,0 +1,21 @@
+# sh ./Sbegin.txt
+# Some time you say "y"
+sudo dpkg -i firmware-iwlwifi_20200918-1_all.deb
+sudo dpkg -i wireless-tools_30_pre9-13.1_amd64.deb
+sudo cp ./sources.list /etc/apt/
+sudo apt update
+sudo apt upgrade
+sudo rmmod pcspkr
+sudo echo "blacklist pcspkr" >>/etc/modprobe.d/blacklist.conf
+sudo apt install ibus
+sudo apt install ibus-unikey
+sudo echo "export GTK_IM_MODULE=ibus" >> ~/.bashrc
+sudo echo "export XMODIFIERS=@im=ibus" >> ~/.bashrc
+sudo echo "export QT_IM_MODULE=ibus" >> ~/.bashrc
+sudo dpkg -i chrony_4.0-2_amd64.deb
+sudo apt-get install chrony
+systemctl enable --now chrony
+systemctl status chronyd
+sudo dpkg -i firmware-iwlwifi_20200918-1_all.deb
+sudo apt install libreoffice
+timedatectl set-timezone "Asia/Ho_Chi_Minh"
