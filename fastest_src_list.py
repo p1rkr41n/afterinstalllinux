@@ -1,11 +1,9 @@
 import os
 from posix import PRIO_PGRP
 import re
-from sys import maxsize
+from sys import minsize
 import time
-# README : sudo python3 fastest_src_list.py
-# ALERT!!! :use mariadb to test
-# Don't use other apps with internet when running.
+
 def cal_time():
     start = time.time()
     os.system("sudo apt install -y mariadb-client")
@@ -39,8 +37,8 @@ if __name__ == "__main__":
     # print(result_url)
     for line in result_url:
         print(line)
-    maxsize = str(max(result_url))
-    print("This is maximum: " + maxsize)
-    maxsize =  maxsize.split(' ')
+    minsize = str(min(result_url))
+    print("This is minimum: " + minsize)
+    minsize =  minsize.split(' ')
     # Set sources.list fastest
-    createsrcfile(maxsize[1])
+    createsrcfile(minsize[1])
