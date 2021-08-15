@@ -14,5 +14,5 @@ sh ./filemane
 		Install Ibus and Ibus-Unikey ( but not config)
 		
 *NOTE: IF YOU CAN'T CONFIG NETWORK OR UNAVAILABLE INTERNET, YOU SHOULD STOP IN HERE.
-Run fastest_src_list.py to choose fastest sources.list
+Run fastcheck2.py to find fastest sources.list
 Tested on Kali Linux 2020.4
